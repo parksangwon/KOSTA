@@ -49,6 +49,9 @@ public class AddChatRoom extends JFrame implements ActionListener
 		setBackground(new Color(255,235,51));
 		setLayout(new BorderLayout());
 
+		ok.addActionListener(this);
+		cancle.addActionListener(this);
+
 		bottomPanel.setLayout(new BorderLayout());
 		bottomPanel.setBackground(new Color(255,235,51));
 
@@ -100,11 +103,11 @@ public class AddChatRoom extends JFrame implements ActionListener
 			catch (Exception e)
 			{
 				e.printStackTrace();
-			}
-			cr.setEnabled(true);
-			setVisible(false); // 종료창 화면에 보이지 않게
-			dispose(); // 종료창 메모리에서 제거
-			
-		}
+			}			
+		} //if
+
+		cr.setEnabled(true);
+		setVisible(false); // 종료창 화면에 보이지 않게
+		dispose(); // 종료창 메모리에서 제거
 	}
 }
