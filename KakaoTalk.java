@@ -70,6 +70,7 @@ public class KakaoTalk extends JFrame
 		chatListView.enterButton.addActionListener(listEvent);
 		chatListView.fListButton.addActionListener(listEvent);
 		chatListView.addChatButton.addActionListener(listEvent);
+		chatListView.exit.addActionListener(new KakaoExitEvent(this));
 
 		//KakaoChatEvent
 		//KakaoChatEvent chatEvent = new KakaoChatEvent(this);
@@ -81,11 +82,13 @@ public class KakaoTalk extends JFrame
 		
 		//KakaoFriendsEvent
 		friendListView.listButton.addActionListener(new KakaoFriendsEvent(this));
-
+		friendListView.exit.addActionListener(new KakaoExitEvent(this));
+		
 		//KakaoInviteEvent
 		KakaoInviteEvent inviteEvent = new KakaoInviteEvent(this);
 		inviteView.inviteButton.addActionListener(inviteEvent);
 		inviteView.backButton.addActionListener(inviteEvent);
+		inviteView.exit.addActionListener(new KakaoExitEvent(this));
 
 		//카드등록완료
 		slide.add(mainView,"kakaoMain");
