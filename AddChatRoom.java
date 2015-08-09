@@ -87,9 +87,12 @@ public class AddChatRoom extends JFrame implements ActionListener
 
 			ArrayList<String> userIdList = new ArrayList<String>();
 			userIdList.add("zz");
+			userIdList.add("aa");
 			try
 			{
-				cr.client.getServer().setRoom("r1", roomName.getName(), userIdList);	
+				cr.client.getServer().setRoom("r1", roomName.getName(), userIdList);
+				Room room = new Room("r1", roomName.getName(), userIdList);
+				cr.chatSlide.addChatRoom(room);
 			}
 			catch (Exception e)
 			{
