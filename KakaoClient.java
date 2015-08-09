@@ -13,7 +13,7 @@ public class KakaoClient extends UnicastRemoteObject implements KakaoClientInter
 
 	public KakaoClient(KakaoTalk frame, String id, String name, String talkName) throws RemoteException, MalformedURLException, NotBoundException {
 		this.frame = frame;
-		server = ( KakaoServerInterface )Naming.lookup( "rmi://127.0.0.1/kakao" );
+		server = ( KakaoServerInterface )Naming.lookup( "rmi://192.168.0.67/kakao" );
 		server.setClient(this, id, name, talkName); // 서버에 유저 등록
 	}
 	public KakaoServerInterface getServer() {
@@ -23,14 +23,11 @@ public class KakaoClient extends UnicastRemoteObject implements KakaoClientInter
 	// 서버로 메시지 받기(메시지)
 	public void setMessage( String msg ) throws RemoteException {
 		System.out.println( msg );
-		// TODO
-		//frame.chatView.textArea.append(msg +"\n");
 	}
 
-	// 채팅방 초대 받기(방정보)
-	public void setRoom( Room room ) throws RemoteException {
-		KakaoList kakaoList = frame.chatListView;
-		kakaoList.addChatRoom( room );
+	// 채팅방으로 이동
+	public void setRoom() throws RemoteException {
+		frame.card.show(frame.slide, "kakaoChatView");
 	}
 }
 
