@@ -77,7 +77,7 @@ public class AddChatRoom extends JFrame implements ActionListener
 
 		setVisible(true);
 		setResizable(false);
-		//cr.setEnabled(false);
+		cr.setEnabled(false);
 	}
 
 	public void actionPerformed(ActionEvent ae){
@@ -93,11 +93,17 @@ public class AddChatRoom extends JFrame implements ActionListener
 				cr.client.getServer().setRoom("r1", roomName.getName(), userIdList);
 				Room room = new Room("r1", roomName.getName(), userIdList);
 				cr.chatSlide.addChatRoom(room);
+				cr.card.show(cr.slide, "kakaoChatSlide");
+				cr.chatSlide.chatCard.show(cr.chatSlide.slide, "r1-" + roomName.getName());
+
 			}
 			catch (Exception e)
 			{
 				e.printStackTrace();
 			}
+			cr.setEnabled(true);
+			setVisible(false); // 종료창 화면에 보이지 않게
+			dispose(); // 종료창 메모리에서 제거
 			
 		}
 	}
