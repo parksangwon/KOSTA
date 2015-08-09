@@ -21,7 +21,7 @@ public class KakaoFriends extends JPanel
 		titleKakao = new JLabel("Kakao");
 		titleTalk = new JLabel("Talk");
 		ImageIcon list = new ImageIcon("list.png");
-		Image resizedList = list.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		Image resizedList = list.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
 		listButton = new JButton("¸ñ·Ï",new ImageIcon(resizedList)); 
 		title = new JLabel("Ä£±¸¸ñ·Ï");
 		listModel = new DefaultListModel();
@@ -47,9 +47,10 @@ public class KakaoFriends extends JPanel
 		titleTalk.setForeground(new Color(255,255,255));
 		titleTalk.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
 
-		title.setBounds(150, 40,	 65, 30);
+		title.setBounds(135, 50, 100, 50);
 		title.setForeground(new Color(255,255,255));
-		title.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
+		title.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
+		
 		listButton.setBackground(new Color(69,44,42));
 		listButton.setBounds(280, 50, 50, 50);
 		listButton.setBorder(null);
