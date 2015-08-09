@@ -2,18 +2,23 @@ import java.io.*;
 
 public class User implements Serializable{
 	private KakaoClientInterface kc;
+	private String userId;
 	private String name;
 	private String talkName;
 
 	// id = UserList에 저장된 인덱스
-	public User(KakaoClientInterface kc, String name, String talkName) {
+	public User(KakaoClientInterface kc, String userId, String name, String talkName) {
 		this.kc = kc;
+		this.userId = userId;
 		this.name = name;
 		this.talkName = talkName;
 	}
 
 	public KakaoClientInterface getClient() {
 		return kc;
+	}
+	public String getUserId() {
+		return userId;
 	}
 	public String getName() {
 		return name;
