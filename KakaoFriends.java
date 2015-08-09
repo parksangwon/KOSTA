@@ -56,6 +56,7 @@ public class KakaoFriends extends JPanel
 		minimize.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
 		minimize.setBorder(null);
 		minimize.setFocusPainted(false);
+		minimize.setBounds(310, 1, 20, 20);
 		minimize.addActionListener(new KakaoSizeEvent(this));
 		*/
 
