@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+
 import java.util.*;
 
 public class KakaoInvite extends JPanel
@@ -18,9 +20,14 @@ public class KakaoInvite extends JPanel
 		controlPanel = new JPanel();
 		titleKakao = new JLabel("Kakao");
 		titleTalk = new JLabel("Talk");
-		inviteButton = new JButton("초대하기"); 
-		backButton = new JButton("돌아가기"); 
-		title = new JLabel("         초대목록         ");
+		ImageIcon add = new ImageIcon("add.png");
+		Image resizedAdd = add.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		inviteButton = new JButton("초대하기", new ImageIcon(resizedAdd)); 
+		ImageIcon previous = new ImageIcon("previous.png");
+		Image resizedPrevious = previous.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		backButton = new JButton("돌아가기", new ImageIcon(resizedPrevious)); 
+		//backButton.setName("돌아가기");
+		title = new JLabel("초대목록");
 		listModel = new DefaultListModel();
 		inviteList = new JList(listModel);
 		scrollPane = new JScrollPane(inviteList);
@@ -41,9 +48,15 @@ public class KakaoInvite extends JPanel
 		title.setBounds(100, 50, 100, 50);
 		title.setForeground(new Color(255,255,255));
 		title.setFont(new Font("맑은 고딕",Font.BOLD,20));
+		
 		inviteButton.setBounds(20, 50, 50, 50);
+		inviteButton.setBackground(new Color(69, 44, 42));
+		inviteButton.setBorder(null);
+		backButton.setBackground(new Color(69, 44, 42));
 		backButton.setBounds(280, 50, 50, 50);
-
+		backButton.setBorder(null);
+		
+		
 		controlPanel.setBounds(0, 0, 350, 100);
 		controlPanel.setBackground(new Color(69,44,42));
 		
