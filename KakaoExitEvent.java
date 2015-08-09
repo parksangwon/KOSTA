@@ -1,6 +1,6 @@
 import java.awt.event.*;
 import java.awt.*;
-//import javax.swing.*;
+import javax.swing.*;
 
 public class KakaoExitEvent implements ActionListener
 {
@@ -11,22 +11,11 @@ public class KakaoExitEvent implements ActionListener
 	}
 
 	public void actionPerformed(ActionEvent ae){
-	}
-/*
-	public void windowClosing(WindowEvent we){ // Frame의 닫기 버튼을 눌렀을 때 호출
-		if(KakaoExitOpened == false){ 
-			KakaoExitOpened = true;
-			KakaoExit exit = new KakaoExit();
-			exit.makeGUI();
-		}
+		KakaoExit exit = new KakaoExit();
+		cr.setEnabled(false);
+		exit.makeGUI();
 	}
 
-	public void windowOpened(WindowEvent we){}
-	public void windowIconified(WindowEvent we){}
-	public void windowDeiconified(WindowEvent we){}
-	public void windowClosed(WindowEvent we){}
-	public void windowActivated(WindowEvent we){}
-	public void windowDeactivated(WindowEvent we){}
 
 	// inner class
 	public class KakaoExit extends JFrame implements ActionListener
@@ -57,20 +46,24 @@ public class KakaoExitEvent implements ActionListener
 		}
 
 		public void makeGUI(){
-			setSize(230,150);
+
+			setSize(230,100);
 			setLocation((int)(screenSize.getWidth()/2 - getWidth()/2), (int)(screenSize.getHeight()/2 - getHeight()/2));
+			setUndecorated(true);
 
 			//이벤트
 			ok.addActionListener(this);
 			cancle.addActionListener(this);
 
 			//배경
-			ctn.setBackground(new Color(255,235,51));
-			buttonPanel.setBackground(new Color(255,235,51));
+			ctn.setBackground(new Color(255,255,255));
+			buttonPanel.setBackground(new Color(255,255,255));
 			ok.setBackground(new Color(69,44,42));
 			ok.setForeground(new Color(255,255,255));
+			ok.setFocusPainted(false);
 			cancle.setBackground(new Color(69,44,42));
 			cancle.setForeground(new Color(255,255,255));
+			cancle.setFocusPainted(false);
 
 			//컴포넌트 추가
 			buttonPanel.add(ok);
@@ -101,16 +94,14 @@ public class KakaoExitEvent implements ActionListener
 				}
 				// **********************접속 종료 서버에 알림추가***************************
 				// **********************접속 종료 서버에 알림추가***************************
-				
 				cr.setVisible(false); // Frame을 화면에서 보이지 않도록
 				cr.dispose(); // 메모리에서 제거
 				System.exit(0); // 프로그램 종료
 				
 			}
-			KakaoExitOpened = false; // 종료창 다시 띄우기 위해
+			cr.setEnabled(true);
 			setVisible(false); // 종료창 화면에 보이지 않게
 			dispose(); // 종료창 메모리에서 제거
 		}
 	}
-	*/
 }
