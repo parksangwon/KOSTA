@@ -62,7 +62,8 @@ public class KakaoTalk extends JFrame
 		mainView.idField.addActionListener(mainEvent);
 		mainView.nameField.addActionListener(mainEvent);
 		mainView.talkNameField.addActionListener(mainEvent);
-		mainView.minimize.addActionListener(new KakaoSizeEvent(this));
+		//mainView.minimize.addActionListener(new KakaoSizeEvent(this));
+		mainView.exit.addActionListener(new KakaoExitEvent(this));
 		
 		//KakaoList
 		KakaoListEvent listEvent = new KakaoListEvent(this);

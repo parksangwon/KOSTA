@@ -42,17 +42,9 @@ public class KakaoListEvent implements ActionListener
 		if (jb.equals("채팅추가"))
 		{
 			try{
-				// 서버로부터 유저 목록 가져옴
+				//서버로부터 유저 목록 가져옴
 				ArrayList<User> users = cr.client.getServer().getClient();
-
-				String[] buttons = {"확인","취소"}; //옵션에 들어갈 버튼
-				AddChatRoom makeRoom = new AddChatRoom(users); // 옵션에 나타날 객체
-				int result = JOptionPane.showOptionDialog(cr, makeRoom,"채팅추가", 0, JOptionPane.PLAIN_MESSAGE, null, buttons, buttons[0]);
-
-				if(result == 0){ // 확인 버튼
-				
-				
-				}	
+				AddChatRoom makeRoom = new AddChatRoom(users); // 옵션에 나타날 유저목록 프레임
 
 			}catch (Exception re){
 					re.printStackTrace();
