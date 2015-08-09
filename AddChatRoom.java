@@ -89,11 +89,14 @@ public class AddChatRoom extends JFrame implements ActionListener
 
 		if(button.equals("»Æ¿Œ")){
 
-			ArrayList<String> userIdList = new ArrayList<String>();
-			userIdList.add("zz");
-			userIdList.add("aa");
 			try
 			{
+				ArrayList<String> userIdList = new ArrayList<String>();
+				ArrayList<User> users = cr.client.getServer().getClient();
+				for(int i = 0 ; i < users.size() ; i++){
+					userIdList.add(users.get(i).getName());
+				}
+
 				ArrayList<Room> rooms = cr.client.getServer().getRoom();
 				if(rooms.size() != 0){
 					Room lastRoom = rooms.get(rooms.size()-1);
@@ -103,6 +106,7 @@ public class AddChatRoom extends JFrame implements ActionListener
 				}
 				Room room = new Room(roomId, roomName.getName(), userIdList);
 				cr.client.getServer().setRoom(room);
+				cr.client.roomId = roomId;
 				//cr.card.show(cr.slide, "kakaoChatView");
 
 			}

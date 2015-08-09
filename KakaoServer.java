@@ -42,20 +42,19 @@ public class KakaoServer extends UnicastRemoteObject implements KakaoServerInter
 	public void setRoom(Room room) throws RemoteException{
 
 		rooms.add(room); // 방 정보를 유지함
-		
 		for(int i = 0 ; i < room.getUserIdList().size() ; i++){
-
+			
 			String UserId = room.getUserIdList().get(i); // id로 유저를 찾음
 			User user = null;
 
 			if(UserId.equals(users.get(i).getUserId())){
-
+				//users.get(i).client.roomId = room.getRoomId();
 				user = users.get(i);
-
+				System.out.println(user.getUserId());
 				try
 				{
 					KakaoClientInterface kci = user.getClient();
-					kci.setRoom();
+					kci.setRoom(room.getRoomId());
 				}
 				catch (ConnectException ce)
 				{

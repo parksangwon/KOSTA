@@ -7,9 +7,9 @@ public class KakaoChatEvent implements ActionListener
 	{
 		this.cr = cr;
 	}
-	public void actionPerformed(ActionEvent e)
+	public void actionPerformed(ActionEvent ae)
 	{		
-		String jb = e.getActionCommand();
+		String jb = ae.getActionCommand();
 		String str = cr.chatView.inputField.getText();
 
 		//KakaoChatEvent
@@ -26,6 +26,17 @@ public class KakaoChatEvent implements ActionListener
 
 		if (jb.equals("전송") || str.length() != 0 )		//글쓰기
 		{
+			try
+			{
+				cr.client.getServer().setMessage(cr.client.roomId , str);
+				cr.chatView.inputField.setText("");
+				cr.chatView.inputField.requestFocus();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+			
 		}
 
 		if (jb.equals("친구초대"))

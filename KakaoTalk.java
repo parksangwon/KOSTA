@@ -26,6 +26,8 @@ public class KakaoTalk extends JFrame
 	KakaoInvite inviteView;
 	
 	KakaoClient client; // 클라이언트 로그인과 동시에 객체 생성
+
+	KakaoListEvent listEvent;
 	
 	public KakaoTalk()
 	{
@@ -60,11 +62,10 @@ public class KakaoTalk extends JFrame
 		mainView.idField.addActionListener(mainEvent);
 		mainView.nameField.addActionListener(mainEvent);
 		mainView.talkNameField.addActionListener(mainEvent);
-		//mainView.minimize.addActionListener(new KakaoSizeEvent(this));
 		mainView.exit.addActionListener(new KakaoExitEvent(this));
 		
 		//KakaoList
-		KakaoListEvent listEvent = new KakaoListEvent(this);
+		listEvent = new KakaoListEvent(this);
 		chatListView.enterButton.addActionListener(listEvent);
 		chatListView.fListButton.addActionListener(listEvent);
 		chatListView.addChatButton.addActionListener(listEvent);

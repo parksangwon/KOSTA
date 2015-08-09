@@ -83,7 +83,6 @@ public class KakaoList extends JPanel
 		exit.setBorder(null);
 		exit.setFocusPainted(false);
 		exit.setBounds(330,5, 20, 20);
-		//exit.addActionListener(new );
 		
 		add(scrollPane);
 
