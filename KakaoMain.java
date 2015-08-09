@@ -5,12 +5,12 @@ import java.util.*;
 
 public class KakaoMain extends JPanel
 {
-	JLabel idLabel, nameLabel, talkNameLabel;
-	JTextField idField, nameField, talkNameField;
-	JButton enterButton;
-	JLabel logo;
-	JButton minimize;
-	JButton exit;
+	public JLabel idLabel, nameLabel, talkNameLabel;
+	public JTextField idField, nameField, talkNameField;
+	public JButton enterButton;
+	public JLabel logo;
+	public JButton minimize;
+	public JButton exit;
 
 	//card1
 	public KakaoMain()

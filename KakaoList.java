@@ -9,12 +9,12 @@ public class KakaoList extends JPanel
 {
 	private ArrayList<Room> roomList;
 
-	JPanel controlPanel;
-	JButton enterButton,addChatButton,fListButton/*, minimize*/, exit;
-	JLabel title, titleTalk, titleKakao;
-	DefaultListModel listModel;
-	JList chatList;
-	JScrollPane scrollPane;
+	public JPanel controlPanel;
+	public JButton enterButton,addChatButton,fListButton/*, minimize*/, exit;
+	public JLabel title, titleTalk, titleKakao;
+	public DefaultListModel listModel;
+	public JList chatList;
+	public JScrollPane scrollPane;
 
 	public KakaoList()
 	{

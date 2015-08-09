@@ -6,12 +6,12 @@ import java.util.*;
 public class KakaoInvite extends JPanel
 {
 	//panel5
-	JPanel controlPanel;
-	JButton inviteButton,backButton/*, minimize*/, exit;
-	JLabel title, titleTalk, titleKakao;
-	DefaultListModel listModel;
-	JList inviteList;
-	JScrollPane scrollPane;
+	public JPanel controlPanel;
+	public JButton inviteButton,backButton/*, minimize*/, exit;
+	public JLabel title, titleTalk, titleKakao;
+	public DefaultListModel listModel;
+	public JList inviteList;
+	public JScrollPane scrollPane;
 	public KakaoInvite()
 	{
 		//card4
