@@ -7,7 +7,7 @@ public class KakaoChat extends JPanel
 {
 		//panel3
 	JPanel controlPanel, inputPanel;
-	JButton preButton, exitButton, sendButton,inviteButton , minimize, exit;
+	JButton preButton, exitButton, sendButton,inviteButton/* , minimize*/, exit;
 	JLabel title, titleTalk, titleKakao;
 	JTextArea textArea;	//¥Î»≠√¢
 	JTextField inputField;	 //¿‘∑¬√¢
@@ -28,7 +28,7 @@ public class KakaoChat extends JPanel
 		textArea = new JTextArea();
 		inputField = new JTextField(20);
 		scrollPane = new JScrollPane(textArea);
-		minimize = new JButton("_");
+		//minimize = new JButton("_");
 		exit = new JButton("X");;
 
 
@@ -44,7 +44,7 @@ public class KakaoChat extends JPanel
 		controlPanel.add(exitButton);
 		inputPanel.add(inputField);
 		inputPanel.add(sendButton);
-		controlPanel.add(minimize);
+		//controlPanel.add(minimize);
 		controlPanel.add(exit); 
 
 		titleKakao.setBounds(10 ,3 ,70, 30);
@@ -54,8 +54,13 @@ public class KakaoChat extends JPanel
 		titleTalk.setForeground(new Color(255,255,255));
 		titleTalk.setFont(new Font("∏º¿∫∞ÌµÒ",Font.BOLD,20));
 
+		preButton.setBounds(305, 30, 45, 45);
+		title.setBounds(0, 80, 350, 440);
+		inviteButton.setBounds(10, 30, 45, 45);
+		exitButton.setBounds(270, 3, 40, 20);
+
 		controlPanel.setBounds(0, 0, 350, 80);
-		controlPanel.setBackground(new Color(155,186,216));
+		controlPanel.setBackground(new Color(147,177,205));
 
 		scrollPane.setBounds(0, 80, 350, 440);
 		textArea.setBackground(new Color(155,186,216));
@@ -68,16 +73,18 @@ public class KakaoChat extends JPanel
 		sendButton.setBackground(new Color(255,235,51));
 		sendButton.setBorder(null);
 		
-		minimize.setBackground(new Color(155,186,216));
+		/*
+		minimize.setBackground(new Color(147,177,205));
 		minimize.setFont(new Font("∏º¿∫∞ÌµÒ",Font.BOLD,15));
 		minimize.setForeground(new Color(255,255,255));
 		minimize.setBorder(null);
 		minimize.setFocusPainted(false);
 		minimize.setBounds(310, 1, 20, 20);
-//		minimize.addActionListener(new KakaoSizeEvent(this));
+		minimize.addActionListener(new KakaoSizeEvent(this));
+		*/
 		
-
-		exit.setBackground(new Color(155,186,216));
+		
+		exit.setBackground(new Color(147,177,205));
 		exit.setFont(new Font("∏º¿∫∞ÌµÒ",Font.BOLD,12));
 		exit.setForeground(new Color(255,255,255));
 		exit.setBorder(null);
