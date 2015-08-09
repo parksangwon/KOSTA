@@ -44,7 +44,7 @@ public class KakaoListEvent implements ActionListener
 			try{
 				//서버로부터 유저 목록 가져옴
 				ArrayList<User> users = cr.client.getServer().getClient();
-				AddChatRoom makeRoom = new AddChatRoom(users); // 옵션에 나타날 유저목록 프레임
+				AddChatRoom makeRoom = new AddChatRoom(cr, users); // 옵션에 나타날 유저목록 프레임
 
 			}catch (Exception re){
 					re.printStackTrace();
