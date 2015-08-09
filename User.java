@@ -32,4 +32,8 @@ public class User implements Serializable{
 	public void setTalkName(String talkName) {
 		this.talkName = talkName;
 	}
+	public boolean equals(User otherUser) {
+		String otherName = otherUser.getName();
+		return this.name.equals(otherName);
+	}
 }
