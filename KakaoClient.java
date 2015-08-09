@@ -25,17 +25,11 @@ public class KakaoClient extends UnicastRemoteObject implements KakaoClientInter
 		System.out.println( msg );
 		frame.chatView.textArea.append(msg +"\n");
 	}
-	
-	// 서버에 접속자 목록 받아오기
-	public void getConnectedUser() throws RemoteException {
-	}
 
-	// 방 생성하기(방제목, 유저정보)
-	public void makeRoom( String roomName, ArrayList<Integer> invitedUserList ) throws RemoteException {
-	}
-
-	// 방 나가기
-	public void exitRoom(  User user ) throws RemoteException {
+	// 채팅방 초대 받기(방정보)
+	public void setRoom( Room room ) throws RemoteException {
+		KakaoList kakaoList = frame.chatListView;
+		kakaoList.addChatRoom( room );
 	}
 }
 
