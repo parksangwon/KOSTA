@@ -5,6 +5,8 @@ import java.util.*;
 
 public class KakaoChat extends JPanel
 {
+	public KakaoTalk kakaoTalk;
+	public Room roomInfo;
 		//panel3
 	JPanel controlPanel, inputPanel;
 	JButton preButton, exitButton, sendButton,inviteButton/* , minimize*/, exit;
@@ -14,8 +16,9 @@ public class KakaoChat extends JPanel
 	JScrollPane scrollPane;
 
 	//card3
-	public KakaoChat()
+	public KakaoChat(Room roomInfo)
 	{
+		this.roomInfo = roomInfo;
 		controlPanel = new JPanel();
 		inputPanel = new JPanel();
 		titleKakao = new JLabel("Kakao");
@@ -91,6 +94,14 @@ public class KakaoChat extends JPanel
 		exit.setFocusPainted(false);
 		exit.setBounds(330,5, 20, 20);
 		//exit.addActionListener(new )
+
+		//KakaoChatEvent
+		KakaoChatEvent chatEvent = new KakaoChatEvent(kakaoTalk, this, roomInfo);
+		this.preButton.addActionListener(chatEvent);
+		this.exitButton.addActionListener(chatEvent);
+		this.sendButton.addActionListener(chatEvent);
+		this.inputField.addActionListener(chatEvent);
+		this.inviteButton.addActionListener(chatEvent);
 
 		add(controlPanel);
 		add(scrollPane);

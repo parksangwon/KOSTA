@@ -3,14 +3,18 @@ import java.awt.event.*;
 public class KakaoChatEvent implements ActionListener
 {
 	private KakaoTalk cr;
-	public KakaoChatEvent(KakaoTalk cr)
+	private KakaoChat kakaoChat;
+	public Room roomInfo;
+	public KakaoChatEvent(KakaoTalk cr, KakaoChat kakaoChat, Room roomInfo)
 	{
 		this.cr = cr;
+		this.kakaoChat = kakaoChat;
+		this.roomInfo = roomInfo;
 	}
 	public void actionPerformed(ActionEvent e)
 	{		
 		String jb = e.getActionCommand();
-		String str = cr.chatView.inputField.getText();
+		String str = kakaoChat.inputField.getText();
 
 		//KakaoChatEvent
 		if (jb.equals("이전"))		//뒤로가기
@@ -29,9 +33,16 @@ public class KakaoChatEvent implements ActionListener
 			if (str.length()!= 0)
 			{
 				// 서버에 넘겨서 다른 유저에게 뿌리는 코드 작성
-				cr.chatView.textArea.append(cr.chatView.inputField.getText() +"\n");
-				cr.chatView.inputField.setText("");
-				cr.chatView.inputField.requestFocus();
+				KakaoServerInterface server = cr.client.getServer();
+				try {
+					server.setMessage( roomInfo.getRoomId(), kakaoChat.inputField.getText() );
+					//cr.chatView.textArea.append(cr.chatView.inputField.getText() +"\n");
+					kakaoChat.inputField.setText("");
+					kakaoChat.inputField.requestFocus();	
+				}
+				catch ( Exception ee) {
+				}
+				
 			}
 		}
 

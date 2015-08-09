@@ -40,7 +40,7 @@ public class KakaoTalk extends JFrame
 		card = new CardLayout();
 		mainView = new KakaoMain();
 		chatListView = new KakaoList();
-		chatSlide = new KakaoSlide(); // 채팅방 카드들을 포함할 패널
+		chatSlide = new KakaoSlide(this); // 채팅방 카드들을 포함할 패널
 		//chatView = new KakaoChat();
 		friendListView = new KakaoFriends();	
 		inviteView = new KakaoInvite();
