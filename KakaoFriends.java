@@ -8,12 +8,12 @@ import java.util.*;
 public class KakaoFriends extends JPanel
 {
 	//panel4
-	JPanel controlPanel;
-	JButton listButton/*, minimize*/, exit;
-	JLabel title, titleTalk, titleKakao;
-	DefaultListModel listModel;
-	JList friendList;
-	JScrollPane scrollPane;
+	public JPanel controlPanel;
+	public JButton listButton/*, minimize*/, exit;
+	public JLabel title, titleTalk, titleKakao;
+	public DefaultListModel listModel;
+	public JList friendList;
+	public JScrollPane scrollPane;
 	public KakaoFriends()
 	{
 		//card4
