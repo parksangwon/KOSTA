@@ -9,7 +9,7 @@ public class KakaoFriends extends JPanel
 {
 	//panel4
 	public JPanel controlPanel;
-	public JButton listButton/*, minimize*/, exit;
+	public JButton listButton, exit;
 	public JLabel title, titleTalk, titleKakao;
 	public DefaultListModel listModel;
 	public JList friendList;
@@ -27,7 +27,6 @@ public class KakaoFriends extends JPanel
 		listModel = new DefaultListModel();
 		friendList = new JList(listModel);
 		scrollPane = new JScrollPane(friendList);
-		//minimize = new JButton("_");
 		exit = new JButton("X");;
 
 		setLayout(null);
@@ -36,7 +35,6 @@ public class KakaoFriends extends JPanel
 		controlPanel.add(titleKakao);
 		controlPanel.add(titleTalk);
 		controlPanel.add(listButton);
-		//controlPanel.add(minimize);
 		controlPanel.add(exit); 
 
 		controlPanel.setBounds(0, 0, 350, 100);
@@ -57,15 +55,6 @@ public class KakaoFriends extends JPanel
 		listButton.setBorder(null);
 		listButton.setFocusPainted(false);
 		scrollPane.setBounds(0, 100, 350, 500);
-
-		/*
-		minimize.setBackground(new Color(255,235,51));
-		minimize.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
-		minimize.setBorder(null);
-		minimize.setFocusPainted(false);
-		minimize.setBounds(310, 1, 20, 20);
-		minimize.addActionListener(new KakaoSizeEvent(this));
-		*/
 
 		exit.setBackground(new Color(69,44,42));
 		exit.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,12));

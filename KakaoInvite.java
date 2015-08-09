@@ -26,12 +26,10 @@ public class KakaoInvite extends JPanel
 		ImageIcon previous = new ImageIcon("previous.png");
 		Image resizedPrevious = previous.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		backButton = new JButton("µπæ∆∞°±‚", new ImageIcon(resizedPrevious)); 
-		//backButton.setName("µπæ∆∞°±‚");
 		title = new JLabel("√ ¥Î∏Ò∑œ");
 		listModel = new DefaultListModel();
 		inviteList = new JList(listModel);
 		scrollPane = new JScrollPane(inviteList);
-		//minimize = new JButton("_");
 		exit = new JButton("X");
 
 		setLayout(null);
@@ -41,7 +39,6 @@ public class KakaoInvite extends JPanel
 		controlPanel.add(inviteButton);
 		controlPanel.add(title);
 		controlPanel.add(backButton);
-		//controlPanel.add(minimize);
 		controlPanel.add(exit); 
 
 		scrollPane.setBounds(0, 100, 350, 500);
@@ -69,14 +66,6 @@ public class KakaoInvite extends JPanel
 		titleTalk.setForeground(new Color(255,255,255));
 		titleTalk.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,20));
 
-		/*
-		minimize.setBackground(new Color(255,235,51));
-		minimize.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,15));
-		minimize.setBorder(null);
-		minimize.setFocusPainted(false);
-		minimize.addActionListener(new KakaoSizeEvent(this));
-		*/
-
 		exit.setBackground(new Color(69,44,42));
 		exit.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,12));
 		exit.setForeground(new Color(255,255,255));
@@ -84,8 +73,6 @@ public class KakaoInvite extends JPanel
 		exit.setFocusPainted(false);
 		exit.setBounds(330,5, 20, 20);
 		//exit.addActionListener(new );
-
-		
 
 		listModel.addElement("f1");	 listModel.addElement("g2");
 		listModel.addElement("f2");	 listModel.addElement("g3 g3");

@@ -10,7 +10,7 @@ public class KakaoList extends JPanel
 	private ArrayList<Room> roomList;
 
 	public JPanel controlPanel;
-	public JButton enterButton,addChatButton,fListButton/*, minimize*/, exit;
+	public JButton enterButton,addChatButton,fListButton, exit;
 	public JLabel title, titleTalk, titleKakao;
 	public DefaultListModel listModel;
 	public JList chatList;
@@ -36,7 +36,6 @@ public class KakaoList extends JPanel
 		listModel = new DefaultListModel();
 		chatList = new JList(listModel);
 		scrollPane = new JScrollPane(chatList);
-		//minimize = new JButton("_");
 		exit = new JButton("X");
 		
 		setLayout(null);
@@ -48,7 +47,6 @@ public class KakaoList extends JPanel
 		controlPanel.add(title);
 		controlPanel.add(fListButton);
 		controlPanel.add(addChatButton);
-		//controlPanel.add(minimize);
 		controlPanel.add(exit); 
 
 		//controlPanel »ö
@@ -78,37 +76,7 @@ public class KakaoList extends JPanel
 		addChatButton.setBorder(null);
 		addChatButton.setFocusPainted(false);
 		scrollPane.setBounds(0, 100, 350, 500);
-		//minimize.setBounds(310, 1, 20, 20);
-
-		/*
-		enterButton.setBackground(new Color(69,44,42));
-		enterButton.setForeground(new Color(255,255,255));
-		enterButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
-		enterButton.setBorder(null);
-		enterButton.setFocusPainted(false);
 		
-
-		fListButton.setBackground(new Color(69,44,42));
-		fListButton.setForeground(new Color(255,255,255));
-		fListButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
-		fListButton.setBorder(null);
-		fListButton.setFocusPainted(false);
-
-		addChatButton.setBackground(new Color(69,44,42));
-		addChatButton.setForeground(new Color(255,255,255));
-		addChatButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
-		addChatButton.setBorder(null);
-		addChatButton.setFocusPainted(false);
-		*/
-
-		/*
-		minimize.setBackground(new Color(255,235,51));
-		minimize.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
-		minimize.setBorder(null);
-		minimize.setFocusPainted(false);
-		minimize.addActionListener(new KakaoSizeEvent(this));
-		*/
-
 		exit.setBackground(new Color(69,44,42));
 		exit.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,12));
 		exit.setForeground(new Color(255,255,255));

@@ -9,7 +9,7 @@ public class KakaoChat extends JPanel
 	public Room roomInfo;
 		//panel3
 	public JPanel controlPanel, inputPanel;
-	public JButton preButton, exitButton, sendButton,inviteButton/* , minimize*/, exit;
+	public JButton preButton, exitButton, sendButton,inviteButton, exit;
 	public JLabel title, titleTalk, titleKakao;
 	public JTextArea textArea;	//¥Î»≠√¢
 	public JTextField inputField;	 //¿‘∑¬√¢
@@ -31,7 +31,6 @@ public class KakaoChat extends JPanel
 		textArea = new JTextArea();
 		inputField = new JTextField(20);
 		scrollPane = new JScrollPane(textArea);
-		//minimize = new JButton("_");
 		exit = new JButton("X");;
 
 
@@ -47,7 +46,6 @@ public class KakaoChat extends JPanel
 		controlPanel.add(exitButton);
 		inputPanel.add(inputField);
 		inputPanel.add(sendButton);
-		//controlPanel.add(minimize);
 		controlPanel.add(exit); 
 
 		titleKakao.setBounds(10 ,3 ,70, 30);
@@ -82,17 +80,6 @@ public class KakaoChat extends JPanel
 		sendButton.setBounds(270, 0, 80, 80);
 		sendButton.setBackground(new Color(255,235,51));
 		sendButton.setBorder(null);
-		
-		/*
-		minimize.setBackground(new Color(147,177,205));
-		minimize.setFont(new Font("∏º¿∫∞ÌµÒ",Font.BOLD,15));
-		minimize.setForeground(new Color(255,255,255));
-		minimize.setBorder(null);
-		minimize.setFocusPainted(false);
-		minimize.setBounds(310, 1, 20, 20);
-		minimize.addActionListener(new KakaoSizeEvent(this));
-		*/
-		
 		
 		exit.setBackground(new Color(147,177,205));
 		exit.setFont(new Font("∏º¿∫∞ÌµÒ",Font.BOLD,12));
