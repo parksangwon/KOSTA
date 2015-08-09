@@ -58,8 +58,15 @@ public class KakaoChat extends JPanel
 		titleTalk.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,20));
 
 		preButton.setBounds(305, 30, 45, 45);
+		preButton.setBorder(null);
+		preButton.setFocusPainted(false);
+
 		title.setBounds(0, 80, 350, 440);
+
 		inviteButton.setBounds(10, 30, 45, 45);
+		inviteButton.setBorder(null);
+		inviteButton.setFocusPainted(false);
+
 		exitButton.setBounds(270, 3, 40, 20);
 
 		controlPanel.setBounds(0, 0, 350, 80);

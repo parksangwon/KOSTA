@@ -52,9 +52,11 @@ public class KakaoInvite extends JPanel
 		inviteButton.setBounds(20, 50, 50, 50);
 		inviteButton.setBackground(new Color(69, 44, 42));
 		inviteButton.setBorder(null);
+		inviteButton.setFocusPainted(false);
 		backButton.setBackground(new Color(69, 44, 42));
 		backButton.setBounds(280, 50, 50, 50);
 		backButton.setBorder(null);
+		backButton.setFocusPainted(false);
 		
 		
 		controlPanel.setBounds(0, 0, 350, 100);

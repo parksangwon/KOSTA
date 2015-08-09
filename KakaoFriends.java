@@ -55,6 +55,7 @@ public class KakaoFriends extends JPanel
 		listButton.setBackground(new Color(69,44,42));
 		listButton.setBounds(280, 50, 50, 50);
 		listButton.setBorder(null);
+		listButton.setFocusPainted(false);
 		scrollPane.setBounds(0, 100, 350, 500);
 
 		/*

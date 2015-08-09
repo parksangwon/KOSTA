@@ -43,6 +43,9 @@ public class KakaoMain extends JPanel
 	
 		enterButton.setBackground(new Color(69,44,42));
 		enterButton.setForeground(new Color(255,255,255));
+		enterButton.setBorder(null);
+		enterButton.setFocusPainted(false);
+		//enterButton.setFocusPainted(false);
 
 		logo.setBounds(100,100,150,150);	 
 		idLabel.setBounds(50,300,50,30);

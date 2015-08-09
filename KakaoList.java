@@ -65,15 +65,18 @@ public class KakaoList extends JPanel
 		enterButton.setBackground(new Color(69,44,42));
 		enterButton.setBounds(20, 50, 50, 50);
 		enterButton.setBorder(null);
+		enterButton.setFocusPainted(false);
 		title.setBounds(100, 50, 100, 50);
 		title.setForeground(new Color(255,255,255));
 		title.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
 		fListButton.setBackground(new Color(69,44,42));
 		fListButton.setBounds(230, 50, 50, 50);
 		fListButton.setBorder(null);
+		fListButton.setFocusPainted(false);
 		addChatButton.setBackground(new Color(69,44,42));
 		addChatButton.setBounds(280, 50, 50, 50);
 		addChatButton.setBorder(null);
+		addChatButton.setFocusPainted(false);
 		scrollPane.setBounds(0, 100, 350, 500);
 		//minimize.setBounds(310, 1, 20, 20);
 
