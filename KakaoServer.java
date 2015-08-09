@@ -39,8 +39,39 @@ public class KakaoServer extends UnicastRemoteObject implements KakaoServerInter
 	}
 
 	// 채팅방 추가 시 방 정보 저장
-	public void setRoom(String roomId, String roomName, ArrayList<String> userIdList) throws RemoteException{
-		rooms.add(new Room(roomId, roomName, userIdList)); // 방 정보를 유지함
+	public void setRoom(Room room) throws RemoteException{
+
+		rooms.add(room); // 방 정보를 유지함
+		
+		for(int i = 0 ; i < room.getUserIdList().size() ; i++){
+
+			String UserId = room.getUserIdList().get(i); // id로 유저를 찾음
+			User user = null;
+
+			if(UserId.equals(users.get(i).getUserId())){
+
+				user = users.get(i);
+
+				try
+				{
+					KakaoClientInterface kci = user.getClient();
+					kci.setRoom();
+				}
+				catch (ConnectException ce)
+				{
+					//System.out.println("나간사람 발생");
+					//*********************************추가
+					//room.getIndex().remove(i);
+					//i--;
+				}
+			} // if
+		} // for
+		
+	}
+
+	// 채팅방 리턴
+	public ArrayList<Room> getRoom() throws RemoteException{
+		return rooms;
 	}
 
 	// 특정 방에 메시지 보내기

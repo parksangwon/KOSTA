@@ -21,6 +21,7 @@ public class AddChatRoom extends JFrame implements ActionListener
 	JButton ok;
 	JButton cancle;
 
+	String roomId;
 	private KakaoTalk cr;
 
 	public AddChatRoom(KakaoTalk cr, ArrayList<User> users){
@@ -93,11 +94,17 @@ public class AddChatRoom extends JFrame implements ActionListener
 			userIdList.add("aa");
 			try
 			{
-				cr.client.getServer().setRoom("r1", roomName.getName(), userIdList);
-				Room room = new Room("r1", roomName.getName(), userIdList);
-				cr.chatSlide.addChatRoom(room);
-				cr.card.show(cr.slide, "kakaoChatSlide");
-				cr.chatSlide.chatCard.show(cr.chatSlide.slide, "r1-" + roomName.getName());
+				ArrayList<Room> rooms = cr.client.getServer().getRoom();
+				if(rooms.size() != 0){
+					Room lastRoom = rooms.get(rooms.size()-1);
+					roomId = Integer.parseInt(lastRoom.getRoomId())+1+"";
+				}else{
+					roomId = "1";
+				}
+				Room room = new Room(roomId, roomName.getName(), userIdList);
+				cr.client.getServer().setRoom(room);
+				cr.chatSlide.addChatRoom(room); // 서버에 방 추가
+				//cr.card.show(cr.slide, "kakaoChatView");
 
 			}
 			catch (Exception e)
