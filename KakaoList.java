@@ -5,6 +5,8 @@ import java.util.*;
 
 public class KakaoList extends JPanel 
 {
+	private ArrayList<Room> roomList;
+
 	JPanel controlPanel, viewPanel;
 	JButton enterButton,addChatButton,fListButton;
 	JLabel title;
@@ -14,6 +16,8 @@ public class KakaoList extends JPanel
 
 	public KakaoList()
 	{
+
+		roomList = new ArrayList<Room>();
 		controlPanel = new JPanel();
 		viewPanel = new JPanel();
 		fListButton = new JButton("친구목록");
@@ -30,14 +34,16 @@ public class KakaoList extends JPanel
 		controlPanel.add(fListButton);
 		controlPanel.add(addChatButton);
 
-		listModel.addElement("Student");	 listModel.addElement("Teacher");
-		listModel.addElement("Driver");	 listModel.addElement("Computer Programmer");
-		listModel.addElement("Sales Man");	 listModel.addElement("Musician");
-		listModel.addElement("Director");
-		
 		chatList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		
 		add("North",controlPanel);
 		add("Center",scrollPane);
+		
+	}
+
+	// 채팅방을 리스트에 추가하고 화면에 추가한다.
+	public void addChatRoom(Room room) {
+		roomList.add(room);
+		listModel.addElement( room.getRoomId() + "-" + room.getRoomName() );
 	}
 }
