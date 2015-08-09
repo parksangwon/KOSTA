@@ -37,7 +37,7 @@ public class KakaoList extends JPanel
 		chatList = new JList(listModel);
 		scrollPane = new JScrollPane(chatList);
 		//minimize = new JButton("_");
-		exit = new JButton("X");;
+		exit = new JButton("X");
 		
 		setLayout(null);
 		controlPanel.setLayout(null);
