@@ -91,9 +91,4 @@ public class KakaoList extends JPanel
 		
 	}
 
-	// 채팅방을 리스트에 추가하고 화면에 추가한다.
-	public void addChatRoom(Room room) {
-		roomList.add(room);
-		listModel.addElement( room.getRoomId() + "-" + room.getRoomName() );
-	}
 }

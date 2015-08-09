@@ -103,7 +103,6 @@ public class AddChatRoom extends JFrame implements ActionListener
 				}
 				Room room = new Room(roomId, roomName.getName(), userIdList);
 				cr.client.getServer().setRoom(room);
-				cr.chatSlide.addChatRoom(room); // 서버에 방 추가
 				//cr.card.show(cr.slide, "kakaoChatView");
 
 			}
