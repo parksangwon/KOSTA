@@ -8,12 +8,12 @@ public class KakaoChat extends JPanel
 	public KakaoTalk kakaoTalk;
 	public Room roomInfo;
 		//panel3
-	JPanel controlPanel, inputPanel;
-	JButton preButton, exitButton, sendButton,inviteButton/* , minimize*/, exit;
-	JLabel title, titleTalk, titleKakao;
-	JTextArea textArea;	//대화창
-	JTextField inputField;	 //입력창
-	JScrollPane scrollPane;
+	public JPanel controlPanel, inputPanel;
+	public JButton preButton, exitButton, sendButton,inviteButton/* , minimize*/, exit;
+	public JLabel title, titleTalk, titleKakao;
+	public JTextArea textArea;	//대화창
+	public JTextField inputField;	 //입력창
+	public JScrollPane scrollPane;
 
 	//card3
 	public KakaoChat(Room roomInfo)
