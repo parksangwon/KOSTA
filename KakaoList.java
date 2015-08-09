@@ -57,17 +57,17 @@ public class KakaoList extends JPanel
 		
 		titleKakao.setBounds(10 ,3 ,70, 30);
 		titleKakao.setForeground(new Color(255,255,255));
-		titleKakao.setFont(new Font("¸¼Àº°íµñ",Font.PLAIN,20));
+		titleKakao.setFont(new Font("¸¼Àº °íµñ",Font.PLAIN,20));
 		titleTalk.setBounds(65 ,3 ,70, 30);
 		titleTalk.setForeground(new Color(255,255,255));
-		titleTalk.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,20));
+		titleTalk.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
 
 		enterButton.setBackground(new Color(69,44,42));
 		enterButton.setBounds(20, 50, 50, 50);
 		enterButton.setBorder(null);
 		title.setBounds(100, 50, 100, 50);
 		title.setForeground(new Color(255,255,255));
-		title.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,20));
+		title.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
 		fListButton.setBackground(new Color(69,44,42));
 		fListButton.setBounds(230, 50, 50, 50);
 		fListButton.setBorder(null);
@@ -80,34 +80,34 @@ public class KakaoList extends JPanel
 		/*
 		enterButton.setBackground(new Color(69,44,42));
 		enterButton.setForeground(new Color(255,255,255));
-		enterButton.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
+		enterButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
 		enterButton.setBorder(null);
 		enterButton.setFocusPainted(false);
 		
 
 		fListButton.setBackground(new Color(69,44,42));
 		fListButton.setForeground(new Color(255,255,255));
-		fListButton.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
+		fListButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
 		fListButton.setBorder(null);
 		fListButton.setFocusPainted(false);
 
 		addChatButton.setBackground(new Color(69,44,42));
 		addChatButton.setForeground(new Color(255,255,255));
-		addChatButton.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
+		addChatButton.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
 		addChatButton.setBorder(null);
 		addChatButton.setFocusPainted(false);
 		*/
 
 		/*
 		minimize.setBackground(new Color(255,235,51));
-		minimize.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
+		minimize.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
 		minimize.setBorder(null);
 		minimize.setFocusPainted(false);
 		minimize.addActionListener(new KakaoSizeEvent(this));
 		*/
 
 		exit.setBackground(new Color(69,44,42));
-		exit.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,12));
+		exit.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,12));
 		exit.setForeground(new Color(255,255,255));
 		exit.setBorder(null);
 		exit.setFocusPainted(false);

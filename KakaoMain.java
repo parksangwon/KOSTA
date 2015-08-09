@@ -54,14 +54,14 @@ public class KakaoMain extends JPanel
 		enterButton.setBounds(50,450,250,40);	
 
 		minimize.setBackground(new Color(255,235,51));
-		minimize.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
+		minimize.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
 		minimize.setBorder(null);
 		minimize.setFocusPainted(false);
 		minimize.setBounds(310, 1, 20, 20);
 		//minimize.addActionListener(new KakaoSizeEvent(this));
 
 		exit.setBackground(new Color(255,235,51));
-		exit.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,12));
+		exit.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,12));
 		exit.setBorder(null);
 		exit.setFocusPainted(false);
 		exit.setBounds(330,5, 20, 20);

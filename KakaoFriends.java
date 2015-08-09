@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+
 import java.util.*;
 
 public class KakaoFriends extends JPanel
@@ -18,7 +20,9 @@ public class KakaoFriends extends JPanel
 		controlPanel = new JPanel();
 		titleKakao = new JLabel("Kakao");
 		titleTalk = new JLabel("Talk");
-		listButton = new JButton("¸ñ·Ï"); 
+		ImageIcon list = new ImageIcon("list.png");
+		Image resizedList = list.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		listButton = new JButton("¸ñ·Ï",new ImageIcon(resizedList)); 
 		title = new JLabel("Ä£±¸¸ñ·Ï");
 		listModel = new DefaultListModel();
 		friendList = new JList(listModel);
@@ -40,16 +44,18 @@ public class KakaoFriends extends JPanel
 		
 		titleKakao.setBounds(10 ,3 ,70, 30);
 		titleKakao.setForeground(new Color(255,255,255));
-		titleKakao.setFont(new Font("¸¼Àº°íµñ",Font.PLAIN,20));
+		titleKakao.setFont(new Font("¸¼Àº °íµñ",Font.PLAIN,20));
 		titleTalk.setBounds(65 ,3 ,70, 30);
 		titleTalk.setForeground(new Color(255,255,255));
-		titleTalk.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,20));
+		titleTalk.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,20));
 
 		title.setBounds(150, 40,	 65, 30);
 		title.setForeground(new Color(255,255,255));
-		title.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,15));
-		listButton.setBounds(250, 40,	 70, 30);
-		scrollPane.setBounds(0, 100,	 350, 500);
+		title.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,15));
+		listButton.setBackground(new Color(69,44,42));
+		listButton.setBounds(280, 50, 50, 50);
+		listButton.setBorder(null);
+		scrollPane.setBounds(0, 100, 350, 500);
 
 		/*
 		minimize.setBackground(new Color(255,235,51));
@@ -61,7 +67,7 @@ public class KakaoFriends extends JPanel
 		*/
 
 		exit.setBackground(new Color(69,44,42));
-		exit.setFont(new Font("¸¼Àº°íµñ",Font.BOLD,12));
+		exit.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,12));
 		exit.setForeground(new Color(255,255,255));
 		exit.setBorder(null);
 		exit.setFocusPainted(false);
