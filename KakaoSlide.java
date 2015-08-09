@@ -23,4 +23,9 @@ public class KakaoSlide extends JPanel {
 		chatList.add(newRoom);
 	}
 
+	public void delChatRoom(KakaoChat kakaoChat) {
+		slide.remove(kakaoChat);
+		chatList.remove(kakaoChat);
+	}
+
 }

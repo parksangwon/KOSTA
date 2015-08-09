@@ -25,6 +25,7 @@ public class KakaoChatEvent implements ActionListener
 		if (jb.equals("나가기"))		//나가기
 		{
 			// 방 나가는 코드 작성(서버에도 보내야함)
+			cr.chatSlide.delChatRoom(kakaoChat);
 			cr.card.show(cr.slide, "kakaoList");
 		}
 
