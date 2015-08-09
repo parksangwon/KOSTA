@@ -23,7 +23,8 @@ public class KakaoClient extends UnicastRemoteObject implements KakaoClientInter
 	// 서버로 메시지 받기(메시지)
 	public void setMessage( String msg ) throws RemoteException {
 		System.out.println( msg );
-		frame.chatView.textArea.append(msg +"\n");
+		// TODO
+		//frame.chatView.textArea.append(msg +"\n");
 	}
 
 	// 채팅방 초대 받기(방정보)
