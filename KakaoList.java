@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+
 import java.util.*;
 
 public class KakaoList extends JPanel 
@@ -19,12 +21,18 @@ public class KakaoList extends JPanel
 
 		roomList = new ArrayList<Room>();
 		controlPanel = new JPanel();
-		fListButton = new JButton("친구목록");
-		enterButton = new JButton("입장"); 
-		addChatButton = new JButton("채팅추가"); 
+		ImageIcon list = new ImageIcon("list.png");
+		Image resizedList = list.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		fListButton = new JButton("친구목록", new ImageIcon(resizedList));
+		ImageIcon enter = new ImageIcon("enter.png");
+		Image resizedEnter = enter.getImage().getScaledInstance(45, 45, Image.SCALE_SMOOTH);
+		enterButton = new JButton("입장",new ImageIcon(resizedEnter)); 
+		ImageIcon addChat = new ImageIcon("add.png");
+		Image resizedAddChat = addChat.getImage().getScaledInstance(45, 45, Image.SCALE_SMOOTH);
+		addChatButton = new JButton("채팅추가",new ImageIcon(resizedAddChat)); 
 		titleKakao = new JLabel("Kakao");
 		titleTalk = new JLabel("Talk");
-		title = new JLabel("         채	팅         ");
+		title = new JLabel("채        팅");
 		listModel = new DefaultListModel();
 		chatList = new JList(listModel);
 		scrollPane = new JScrollPane(chatList);
@@ -54,11 +62,19 @@ public class KakaoList extends JPanel
 		titleTalk.setForeground(new Color(255,255,255));
 		titleTalk.setFont(new Font("맑은고딕",Font.BOLD,20));
 
-		enterButton.setBounds(50, 50,	 50, 50);
-		title.setBounds(50, 50,	 50, 50);
-		fListButton.setBounds(50, 50,	 50, 50);
-		addChatButton.setBounds(50, 50,	 50, 50);
-		scrollPane.setBounds(0, 100,	 350, 500);
+		enterButton.setBackground(new Color(69,44,42));
+		enterButton.setBounds(20, 50, 50, 50);
+		enterButton.setBorder(null);
+		title.setBounds(100, 50, 100, 50);
+		title.setForeground(new Color(255,255,255));
+		title.setFont(new Font("맑은고딕",Font.BOLD,20));
+		fListButton.setBackground(new Color(69,44,42));
+		fListButton.setBounds(230, 50, 50, 50);
+		fListButton.setBorder(null);
+		addChatButton.setBackground(new Color(69,44,42));
+		addChatButton.setBounds(280, 50, 50, 50);
+		addChatButton.setBorder(null);
+		scrollPane.setBounds(0, 100, 350, 500);
 		//minimize.setBounds(310, 1, 20, 20);
 
 		/*
