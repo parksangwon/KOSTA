@@ -11,10 +11,10 @@ public class KakaoClient extends UnicastRemoteObject implements KakaoClientInter
 
 	public KakaoClient() throws RemoteException {}
 
-	public KakaoClient(KakaoTalk frame, String name, String talkName) throws RemoteException, MalformedURLException, NotBoundException {
+	public KakaoClient(KakaoTalk frame, String id, String name, String talkName) throws RemoteException, MalformedURLException, NotBoundException {
 		this.frame = frame;
 		server = ( KakaoServerInterface )Naming.lookup( "rmi://127.0.0.1/kakao" );
-		server.setClient(this,  name,  talkName); // 서버에 유저 등록
+		server.setClient(this, id, name, talkName); // 서버에 유저 등록
 	}
 	public KakaoServerInterface getServer() {
 		return server;
