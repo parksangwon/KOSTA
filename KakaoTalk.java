@@ -99,7 +99,7 @@ public class KakaoTalk extends JFrame
 		setVisible(true);
 		setResizable(false);
 
-		card.show(slide,"kakaoChatSlide");
+		card.show(slide,"kakaoMain");
 	}
 	
 	public static void main(String[] args) 
