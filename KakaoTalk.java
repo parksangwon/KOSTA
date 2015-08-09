@@ -21,7 +21,8 @@ public class KakaoTalk extends JFrame
 	CardLayout card;
 	KakaoMain mainView;
 	KakaoList chatListView;
-	KakaoChat chatView;
+	KakaoSlide chatSlide;
+	//KakaoChat chatView;
 	KakaoFriends friendListView;
 	KakaoInvite inviteView;
 	
@@ -39,7 +40,8 @@ public class KakaoTalk extends JFrame
 		card = new CardLayout();
 		mainView = new KakaoMain();
 		chatListView = new KakaoList();
-		chatView = new KakaoChat();
+		chatSlide = new KakaoSlide(); // 채팅방 카드들을 포함할 패널
+		//chatView = new KakaoChat();
 		friendListView = new KakaoFriends();	
 		inviteView = new KakaoInvite();
 	}
@@ -69,12 +71,12 @@ public class KakaoTalk extends JFrame
 		chatListView.addChatButton.addActionListener(listEvent);
 
 		//KakaoChatEvent
-		KakaoChatEvent chatEvent = new KakaoChatEvent(this);
-		chatView.preButton.addActionListener(chatEvent);
-		chatView.exitButton.addActionListener(chatEvent);
-		chatView.sendButton.addActionListener(chatEvent);
-		chatView.inputField.addActionListener(chatEvent);
-		chatView.inviteButton.addActionListener(chatEvent);
+		//KakaoChatEvent chatEvent = new KakaoChatEvent(this);
+		//chatSlide.preButton.addActionListener(chatEvent);
+		//chatSlide.exitButton.addActionListener(chatEvent);
+		//chatSlide.sendButton.addActionListener(chatEvent);
+		//chatSlide.inputField.addActionListener(chatEvent);
+		//chatSlide.inviteButton.addActionListener(chatEvent);
 		
 		//KakaoFriendsEvent
 		friendListView.listButton.addActionListener(new KakaoFriendsEvent(this));
@@ -86,8 +88,8 @@ public class KakaoTalk extends JFrame
 
 		//카드등록완료
 		slide.add(mainView,"kakaoMain");
-		slide.add(chatListView,"kakaoList");	
-		slide.add(chatView,"kakaoChat");
+		slide.add(chatListView,"kakaoList");
+		slide.add(chatSlide,"kakaoChatSlide"); // 앞으로 채팅방에 들어가면 여기서 보이는걸로
 		slide.add(friendListView,"kakaoFriends");
 		slide.add(inviteView,"kakaoInvite");
 
@@ -96,7 +98,7 @@ public class KakaoTalk extends JFrame
 		setVisible(true);
 		setResizable(false);
 
-		card.show(slide,"kakaoMain");
+		card.show(slide,"kakaoChatSlide");
 	}
 	
 	public static void main(String[] args) 
